@@ -1,0 +1,73 @@
+[build-system]
+requires = ["hatchling>=1.24.0"]
+build-backend = "hatchling.build"
+
+[project]
+name = "tf-logging-sdk"
+version = "0.1.0"
+description = "项目级统一日志 SDK，提供标准字段、上下文注入、脱敏和多通道输出能力"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [
+    {name = "tfkxsx", email = "tfkxsx@gmail.com"},
+]
+keywords = [
+    "logging",
+    "logstash",
+    "structured-logging",
+    "observability",
+    "sdk",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: System :: Logging",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+    "build>=1.2.1",
+    "pytest>=8.0.0",
+    "twine>=5.0.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/tfkxsx/tf-logging-sdk"
+Repository = "https://github.com/tfkxsx/tf-logging-sdk"
+Issues = "https://github.com/tfkxsx/tf-logging-sdk/issues"
+Source = "git@github.com:tfkxsx/tf-logging-sdk.git"
+
+[tool.hatch.build]
+exclude = [
+    "/.git",
+    "/.venv",
+    "/logs",
+    "/__pycache__",
+    "*.pyc",
+    "*.pyo",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/tf_logging_sdk"]
+
+[tool.hatch.build.targets.sdist]
+include = [
+    "pyproject.toml",
+    "README.md",
+    "LICENSE",
+    "MANIFEST.in",
+    "src/tf_logging_sdk/**",
+    "examples/**",
+    "统一日志SDK设计说明.md",
+    "统一日志SDK接入指南.md",
+    "统一日志SDK验收记录.md",
+]

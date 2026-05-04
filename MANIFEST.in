@@ -1,0 +1,10 @@
+include README.md
+include LICENSE
+include pyproject.toml
+include 统一日志SDK设计说明.md
+include 统一日志SDK接入指南.md
+include 统一日志SDK验收记录.md
+recursive-include src/tf_logging_sdk *.py
+recursive-include examples *.py
+global-exclude __pycache__/*
+global-exclude *.py[cod]
