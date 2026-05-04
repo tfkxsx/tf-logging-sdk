@@ -44,7 +44,7 @@ dev = [
 Homepage = "https://github.com/tfkxsx/tf-logging-sdk"
 Repository = "https://github.com/tfkxsx/tf-logging-sdk"
 Issues = "https://github.com/tfkxsx/tf-logging-sdk/issues"
-Source = "git@github.com:tfkxsx/tf-logging-sdk.git"
+Source = "https://github.com/tfkxsx/tf-logging-sdk.git"
 
 [tool.hatch.build]
 exclude = [
